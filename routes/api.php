@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,17 @@ Route::put('/animals/{id}', [AnimalController::class, 'update']);
 
 //method delete
 Route::delete('/animals/{id}',[AnimalController::class, 'destroy']);
+
+//get all resource students
+//method get
+Route::get('/students', [StudentController::class, 'index']);
+
+//menambahkan resourc student 
+//method post
+Route::post('/students', [StudentController::class, 'store']);
+
+//method put / update
+Route::put('/students/{id}', [StudentController::class, 'update']);
+
+//method delete/destroy
+Route::delete('/students/{id}', [StudentController::class, 'destroy']);
